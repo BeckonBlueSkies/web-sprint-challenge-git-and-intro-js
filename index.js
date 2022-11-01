@@ -262,11 +262,9 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(arr) {
+function removeArtist(arr, index) {
   const removed= [...arr];
-  removed.filter((index) => {
-    removed.slice(index,1);
-  })
+    removed.splice(index, 1)
   return removed;
   }
   console.log('task 5:', removeArtist(artists, 1));
@@ -288,10 +286,9 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array, string1, string2, string3, string4, string5) {
-  const add = [...array];
+function addArtist(arr, string1, string2, string3, string4, string5) {
+  const add = [...arr];
   const beckon= {
-    id: 20,
     name: string1,
     years: string2,
     genre: string3,
